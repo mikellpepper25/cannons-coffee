@@ -38,7 +38,7 @@ h1 {
   line-height: 1.1667;
   font-weight: 300;
   text-transform: uppercase;
-  margin: 0;
+  /* margin: 1; */
 }
 h2 {
   font-size: 2.5rem;
@@ -70,7 +70,8 @@ nav ul {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 nav a {
   text-decoration: none;
@@ -82,12 +83,22 @@ nav {
   align-items: center;
 }
 header img {
-  display: block;
+  /* display: block; */
   margin: 0 auto;
-  margin-bottom: 10px;
+  padding-top: 3%;
 }
 header {
   border-bottom: 8px solid var(--sunglow);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.header{
+    display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
 }
 
 main {
@@ -102,19 +113,20 @@ main .button {
   color: var(--white);
 }
 
-.opening-section img {
-  padding: 0;
+.hero {
+  padding: 4%;
   background-color: var(--white);
   min-width: 0;
-  height: 450px;
+  height: 400px;
   object-fit: cover;
-  width: calc(100% - 2rem);
+  width: 100%;
 }
 .opening-section {
   display: flex;
   flex-direction: column;
   gap: 0;
   background-color: var(--white);
+  padding: 8%;
 }
 .opening-text {
   padding: 1rem;
@@ -140,50 +152,72 @@ main .button {
 .coffee-card img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
-.coffee-card h3 {
-  text-align: center;
-}
-header p {
+
+header h1 {
   color: var(--white);
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 300;
   text-align: center;
   text-transform: uppercase;
   line-height: 1.2;
-  margin: 0;
-  max-width: none;
+  /* overflow-wrap: anywhere; */
+  white-space: normal;
   margin: 0 auto;
-  overflow-wrap: anywhere;
-  white-space: nowrap;
-  margin-left: auto;
+  /* max-width: 140px; */
 }
 .coffee-card .button {
   background-color: var(--catalina);
 }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 8px solid var(--sunglow);
+  color: var(--white);
+  flex-direction: column;
+  padding: 1rem 0;
+}
+footer h2 {
+  font-weight: 500;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+footer img {
+  width: 200px;
+}
+footer p {
+  text-align: center;
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+}
+
 @media (min-width: 650px) {
+  
   .opening-section {
     flex-direction: row;
-  }
-  nav {
-    align-items: center;
-  }
-
-  header {
-    display: block;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 8px solid var(--sunglow);
-  }
-
-  .opening-text {
-    padding: 2rem;
-    background-color: var(--white);
-    flex: 1;
+    padding: 0;
+    
   }
   .opening-section img {
-    width: 50%;
+  width: 50%;
+  margin: 0;
+}
+
+  .opening-text {
+    padding: 1rem;
+    flex: 1;
+    text-align: left;
+    font-size: 1.5rem;
   }
+  .hero {
+  width: 50%;
+  padding: 0;
+  height: auto;
+}
 
   .coffee-cards {
     flex-direction: row;
@@ -192,6 +226,41 @@ header p {
   .coffee-card {
     width: calc(50% - 0.5rem);
   }
+
+  .header {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    padding: 1rem 1rem 0;
+  }
+  header h1 {
+    font-size: 3rem;
+    margin: 0;
+    /* padding-top: 0.5rem;
+    white-space: nowrap; */
+  }
+  header img {
+    padding-top: 0;
+    margin: 0;
+  }
+  nav ul {
+    margin-top: 0rem;
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+  }
+  footer h2,
+  footer p {
+    margin: 0.5rem;
+  }
+  footer img {
+    width: 200px;
+  }
+  .coffee-card h3 {
+    text-align: left;
+  }
+  .opening-text .button {
+  margin-top: 1rem;
+}
 }
 @media (min-width: 1000px) {
   header {
@@ -200,18 +269,32 @@ header p {
     justify-content: space-between;
     padding: 1rem;
   }
-  .header-brand {
-    min-width: 300px;
-    display: flex;
-    align-items: flex-end;
-    gap: 1rem;
-  }
   .coffee-card {
     width: calc(25% - 0.75rem);
   }
-  nav {
+  nav ul {
     align-items: flex-end;
     padding: 0;
     margin: 0;
+    font-size: 1.2rem;
   }
+  .opening-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .opening-text h1 {
+    font-size: 3rem;
+     margin-bottom: 0;
+  }
+  header h1 {
+  font-size: 2.5rem;
+}
+.hero {
+  height: 550px;
+}
+.opening-section img {
+  margin: 0;
+}
 }
